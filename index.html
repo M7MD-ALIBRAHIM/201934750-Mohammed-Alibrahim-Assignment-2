@@ -1,0 +1,188 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mohammed Alibrahim | Portfolio</title>
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+
+    <!-- Navigation Bar -->
+    <header>
+        <nav class="navbar">
+            <h2 class="logo">Mohammed Alibrahim</h2>
+
+            <ul class="nav-links">
+                <li><a href="#about">About</a></li>
+                <li><a href="#projects">Projects</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+
+            <button id="theme-toggle" type="button">
+                Dark Mode
+            </button>
+        </nav>
+    </header>
+
+    <main>
+
+        <!-- About Me Section -->
+        <section id="about" class="section">
+            <div class="container">
+                <h1>Hello, I'm Mohammed Alibrahim</h1>
+
+                <p id="greeting" class="greeting"></p>
+
+                <p class="tagline">
+                    Student | Web Development Student
+                </p>
+
+                <p>
+                    I am a student at King Fahd University
+                    of Petroleum and Minerals (KFUPM).
+                    I am a Management Information Systems 
+                    student from Business school.
+                </p>
+
+                <a href="#projects" class="btn">
+                    View My Projects
+                </a>
+            </div>
+        </section>
+
+        <!-- Projects Section -->
+        <section id="projects" class="section">
+            <div class="container">
+                <h2>My Projects</h2>
+
+                <p>
+                    Explore my projects using the
+                    category filters below.
+                </p>
+
+                <!-- Project Filter Buttons -->
+                <div class="filter-buttons">
+                    <button
+                        class="filter-btn active"
+                        data-filter="all"
+                        type="button">
+                        All Projects
+                    </button>
+
+                    <button
+                        class="filter-btn"
+                        data-filter="web"
+                        type="button">
+                        Web Development
+                    </button>
+
+                    <button
+                        class="filter-btn"
+                        data-filter="games"
+                        type="button">
+                        Games
+                    </button>
+                </div>
+
+                <div class="projects-grid">
+
+                    <!-- Project 1 -->
+                    <div class="project-card" data-category="web">
+                        <div class="project-image">
+                            Project 1
+                        </div>
+
+                        <h3>Personal Portfolio Website</h3>
+
+                        <p>
+                            A responsive personal portfolio
+                            website created using HTML,
+                            CSS, and JavaScript.
+                        </p>
+                    </div>
+
+                    <!-- Project 2 -->
+                    <div class="project-card" data-category="games">
+                        <div class="project-image">
+                            Project 2
+                        </div>
+
+                        <h3>BrainBites Puzzle Platform</h3>
+
+                        <p>
+                            A web-based puzzle platform
+                            designed to provide interactive
+                            challenges and improve
+                            problem-solving skills.
+                        </p>
+                    </div>
+
+                </div>
+
+                <p id="no-projects" class="hidden" role="status">
+                    No projects found in this category.
+                </p>
+            </div>
+        </section>
+
+        <!-- Contact Section -->
+        <section id="contact" class="section">
+            <div class="container">
+                <h2>Contact Me</h2>
+
+                <p>
+                    Feel free to send me a message!
+                </p>
+
+                <form id="contact-form" novalidate>
+
+                    <label for="name">Name</label>
+                    <input
+                        type="text"
+                        id="name"
+                        placeholder="Enter your name"
+                        required
+                    >
+
+                    <label for="email">Email</label>
+                    <input
+                        type="email"
+                        id="email"
+                        placeholder="Enter your email"
+                        required
+                    >
+
+                    <label for="message">Message</label>
+                    <textarea
+                        id="message"
+                        rows="5"
+                        placeholder="Write your message"
+                        required
+                    ></textarea>
+
+                    <button type="submit" class="btn">
+                        Send Message
+                    </button>
+
+                    <p id="form-message" role="status" aria-live="polite"></p>
+
+                </form>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- Footer -->
+    <footer>
+        <p>
+            &copy; 2026 Mohammed Alibrahim
+            | Student ID: 201934750
+        </p>
+    </footer>
+
+    <script src="js/script.js"></script>
+
+</body>
+</html>
