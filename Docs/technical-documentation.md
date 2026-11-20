@@ -1,93 +1,55 @@
-# Technical Documentation
+# Technical Documentation – Assignment 3
 
-1. Project Overview
+## 1. Project Overview
 
-This project is a personal portfolio website developed using HTML, CSS, and JavaScript. It is an improved version of my Assignment 1 website, with additional interactive features to make it more useful and user-friendly.
+This project is an improved personal portfolio website developed using HTML, CSS, and JavaScript. Assignment 3 adds advanced features such as GitHub API integration, project sorting, state management, and improved error handling.
 
-The website includes three main sections: About Me, Projects, and Contact. In Assignment 2, I added features such as project filtering, persistent dark mode, dynamic greetings, and improved form validation.
+## 2. Technologies Used
 
-2. Technologies Used
+- **HTML:** Structures the website and its sections.
+- **CSS:** Handles styling, animations, and responsive design.
+- **JavaScript:** Implements dynamic features, sorting, filtering, and form validation.
+- **GitHub REST API:** Retrieves public repositories.
+- **localStorage:** Saves the user's dark/light mode preference.
 
-The following technologies were used to develop the website:
+## 3. Main Features
 
-HTML: Used to create the structure and content of the website, including the navigation bar, project cards, and contact form.
+### GitHub API Integration
 
-CSS: Used to style the website, create responsive layouts, and add animations and hover effects.
+The website uses JavaScript `fetch()` and `async/await` to retrieve public repositories from my GitHub account. It displays up to six repositories with their names, descriptions, programming languages, and links.
 
-JavaScript: Used to add interactive features such as project filtering, dark mode, dynamic greetings, and form validation.
+### Project Filtering and Sorting
 
-localStorage: Used to save the user's selected theme so that it remains active after refreshing the page.
+Users can filter projects by category and sort them alphabetically (A–Z or Z–A). JavaScript updates the displayed projects based on user selections.
 
-3. Website Structure
+### State Management
 
-The website consists of three main sections:
+The website uses `localStorage` to remember the selected theme after refreshing. JavaScript also tracks the current project filter and sorting option.
 
-About Me: This section introduces me and provides basic information about my interests in technology and programming. It also displays a greeting based on the time of day.
+### Form Validation
 
-Projects: This section displays my projects, including the Personal Portfolio Website and BrainBites Puzzle Platform. Users can filter the projects by category.
+The contact form checks for empty fields, validates the email format, and requires a message of at least 10 characters. It displays appropriate success or error messages without sending data to a server.
 
-Contact: This section contains a contact form where visitors can enter their name, email address, and message. The form validates the inputs and provides feedback.
+### Error Handling
 
-4. Interactive Features
+The GitHub API uses `try`, `catch`, and `finally` to handle requests. The website displays loading messages and helpful error messages if the API fails.
 
-4.1 Project Filtering
+## 4. Performance and Responsive Design
 
-I implemented project filtering using JavaScript. Users can select between All Projects, Web Development, and Games.
+The website uses lightweight HTML, CSS, and JavaScript without external frameworks. Only six GitHub repositories are displayed to keep the interface simple.
 
-JavaScript detects which filter button is clicked and displays only the projects that match the selected category. This is done by checking the data-category attribute of each project card and adding or removing the hidden CSS class.
+CSS Grid, Flexbox, and media queries make the website responsive across desktop, tablet, and mobile devices.
 
-4.2 Dark and Light Mode
+## 5. Testing and Verification
 
-The website allows users to switch between dark and light themes.
+The website should be tested by checking:
 
-JavaScript adds or removes the dark-mode class from the page when the theme button is clicked. The selected theme is saved using localStorage, allowing the website to remember the user's preference after refreshing.
+- GitHub repositories load correctly.
+- Project filtering and sorting work together.
+- Dark mode remains active after refreshing.
+- Contact form validation displays correct messages.
+- The layout adapts to different screen sizes.
 
-4.3 Dynamic Greeting
+## 6. Conclusion
 
-The website displays a greeting message based on the current time.
-
-JavaScript uses the Date object to determine the hour and displays Good Morning, Good Afternoon, or Good Evening depending on the time of day.
-
-4.4 Animations and Transitions
-
-CSS transitions and animations were added to improve the user experience.
-
-Buttons change appearance when hovered over, and project cards move slightly upward when the mouse is placed over them. A fade-in animation is also used for project cards.
-
-5. Form Validation and Error Handling
-
-The contact form uses JavaScript to validate user inputs before displaying a confirmation message.
-
-The form checks whether the name, email, and message fields are filled. It also checks whether the email address follows a valid format.
-
-If the user enters invalid information, an error message appears. If all fields are valid, a confirmation message is displayed and the form fields are cleared.
-
-The form is a front-end demonstration and does not send messages to a server.
-
-The website also includes basic error handling for localStorage. If the browser cannot save or load the selected theme, the website continues to function without saving the preference.
-
-6. Responsive Design
-
-The website uses CSS Grid and Flexbox to create a responsive layout.
-
-Media queries adjust the design for different screen sizes. On larger screens, the project cards appear in two columns. On smaller screens, they appear in one column, and the navigation bar adjusts to fit the available space.
-
-This helps make the website accessible on desktop, tablet, and mobile devices.
-
-7. Testing and Verification
-
-The following checks can be used to verify the website's functionality:
-
-Project Filtering: Click each filter button and confirm that the correct projects appear.
-
-Dark Mode: Switch to dark mode, refresh the page, and check whether the selected theme remains active.
-
-Dynamic Greeting: Check that the greeting matches the current time of day.
-
-Contact Form: Submit empty fields, invalid email addresses, and valid information to check the feedback messages.
-
-Responsive Design: Resize the browser window and check whether the layout adjusts correctly.
-
-Animations: Hover over buttons and project cards to check their transitions.
-
-These tests help verify that the interactive features work as intended and that the website provides a good user experience.
+Assignment 3 improved my portfolio website by adding external API integration, advanced JavaScript functionality, state management, and error handling. These improvements helped me develop a more interactive and efficient web application.
