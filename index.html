@@ -17,7 +17,6 @@
             <ul class="nav-links">
                 <li><a href="#about">About</a></li>
                 <li><a href="#projects">Projects</a></li>
-                <li><a href="#github">GitHub</a></li>
                 <li><a href="#contact">Contact</a></li>
             </ul>
 
@@ -37,11 +36,11 @@
                 <p id="greeting" class="greeting"></p>
 
                 <p class="tagline">
-                    Student | Web Development student   
+                    Student | Web Development Student
                 </p>
 
                 <p>
-                     I am a student at King Fahd University
+                    I am a student at King Fahd University
                     of Petroleum and Minerals (KFUPM).
                     I am a Management Information Systems 
                     student from Business school.
@@ -60,10 +59,10 @@
 
                 <p>
                     Explore my projects using the
-                    filters and sorting options below.
+                    category filters below.
                 </p>
 
-                <!-- Project Filters -->
+                <!-- Project Filter Buttons -->
                 <div class="filter-buttons">
                     <button
                         class="filter-btn active"
@@ -87,28 +86,9 @@
                     </button>
                 </div>
 
-                <!-- Project Sorting -->
-                <div class="sort-container">
-                    <label for="sort-projects">
-                        Sort Projects:
-                    </label>
+                <div class="projects-grid">
 
-                    <select id="sort-projects">
-                        <option value="default">
-                            Default Order
-                        </option>
-                        <option value="az">
-                            Name: A to Z
-                        </option>
-                        <option value="za">
-                            Name: Z to A
-                        </option>
-                    </select>
-                </div>
-
-                <!-- Project Cards -->
-                <div class="projects-grid" id="projects-grid">
-
+                    <!-- Project 1 -->
                     <div class="project-card" data-category="web">
                         <div class="project-image">
                             Project 1
@@ -123,6 +103,7 @@
                         </p>
                     </div>
 
+                    <!-- Project 2 -->
                     <div class="project-card" data-category="games">
                         <div class="project-image">
                             Project 2
@@ -143,47 +124,6 @@
                 <p id="no-projects" class="hidden" role="status">
                     No projects found in this category.
                 </p>
-            </div>
-        </section>
-
-        <!-- GitHub API Section -->
-        <section id="github" class="section">
-            <div class="container">
-                <h2>My GitHub Repositories</h2>
-
-                <p>
-                    Explore my latest public repositories
-                    directly from GitHub.
-                </p>
-
-                <a
-                    href="https://github.com/M7MD-ALIBRAHIM"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    class="btn">
-                    Visit My GitHub Profile
-                </a>
-
-                <!-- API Loading Message -->
-                <p id="github-loading" role="status">
-                    Loading GitHub repositories...
-                </p>
-
-                <!-- API Error Message -->
-                <p
-                    id="github-error"
-                    class="hidden error"
-                    role="alert">
-                    Unable to load GitHub repositories.
-                    Please try again later.
-                </p>
-
-                <!-- Dynamic Repository Cards -->
-                <div
-                    id="github-repos"
-                    class="projects-grid">
-                </div>
-
             </div>
         </section>
 
@@ -226,11 +166,7 @@
                         Send Message
                     </button>
 
-                    <p
-                        id="form-message"
-                        role="status"
-                        aria-live="polite">
-                    </p>
+                    <p id="form-message" role="status" aria-live="polite"></p>
 
                 </form>
             </div>
